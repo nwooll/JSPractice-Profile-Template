@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>A00987471 - Online1</title>
+  
+    <style>
+      
+        
+        .container {
+            width:70%;
+              margin-left: auto ;
+  margin-right: auto ;
+        }
+        
+        .cardhovercard {
+    top: 20px;
+    margin: 10px 0 20px 0;
+    background-color: rgba(214, 224, 226, 0.2);
+    border-radius: 16px;
+    box-shadow: 0px 0px 15px #363333;
+    height: auto;
+    
+}
+
+.cardhovercard {
+    position: relative;
+    padding-top: 0;
+    overflow: hidden;
+    text-align: center;
+    background-color: rgba(214, 224, 226, 0.2);
+}
+
+.cardhovercard .cardheader {
+    background: url("background.jpg");
+    background-size: cover;
+    height: 135px;
+    box-shadow: 0px 0px 15px #363333;
+}
+
+.cardhovercard .avatar {
+    position: relative;
+    top: -50px;
+    margin-bottom: -50px;
+}
+
+.cardhovercard .avatar img {
+    width: 100px;
+    height: 100px;
+   
+    border-radius: 50%;
+    border: 5px solid rgba(255,255,255,0.5);
+    box-shadow: 0px 0px 15px #363333;
+}
+
+
+.cardhovercard .info .title {
+    margin-bottom: 4px;
+    font-size: 24px;
+    line-height: 1;
+    color: #000000;
+    
+    
+}
+
+        .desc {
+            cursor: pointer; 
+            text-decoration: underline;
+        }
+
+     /* image size buttons */
+        
+        #box{
+            Width: 30px;
+            height: 30px;
+            background-color: white;
+          position: absolute;
+             margin: 10px;
+            border-radius: 50%;
+            border: 5px solid rgba(255,255,255,0.5);
+    box-shadow: 0px 0px 15px #363333;
+        }
+        
+        #box2 {
+            Width: 30px;
+            height: 30px;
+            background-color: white;
+           position: relative;
+             margin: 10px;
+            border-radius: 50%;
+            border: 5px solid rgba(255,255,255,0.5);
+    box-shadow: 0px 0px 15px #363333;
+        }
+        
+        #box img{
+            width: 30px;
+            height: 30px;
+        }
+        
+         #box2 img{
+            width: 30px;
+            height: 30px;
+        }
+        #card{
+            transition: 1s;
+        }
+        
+        #text{
+            margin: 20px;
+        }
+
+        
+    </style>
+    </head>
+    
+    <body>
+<div class="container">
+	
+		
+
+            <div class="cardhovercard" >
+                <div class="cardheader" id="card">
+
+                </div>
+                <div class="avatar">
+                    <img alt="" src="portrait.jpg">
+                </div>
+                <div class="info">
+                    <div class="title">
+                        <h4>Neelam Woolley</h4>
+                      <div id="box2"><img src="uparrow.png"></div>
+                    <div id="box"><img src="downarrow.png"></div>    
+                    </div>
+                    <div id="text">
+                    <div class="desc" id="bg">Paint</div>
+                    <div class="desc" id="bg2">Pencil</div>
+                    <div class="desc" id="bg3">Ink</div>
+                </div>
+                    </div>
+               
+            </div>
+
+        </div>
+
+	
+
+<script>
+    
+       document.getElementById("bg").addEventListener("click", function(){
+            document.getElementById("card").style.backgroundImage = "url(background.jpg)";
+            });
+    
+           document.getElementById("bg2").addEventListener("click", function(){
+            document.getElementById("card").style.backgroundImage = "url(background3.jpg)";
+                });
+    
+               document.getElementById("bg3").addEventListener("click", function(){
+            document.getElementById("card").style.backgroundImage = "url(background2.jpg)";
+       });
+    
+    
+    //sizing buttons
+    
+     var box = document.getElementById("card"); 
+            var box2 = document.getElementById("box");
+            var box3 = document.getElementById("box2");
+           // var num = 50; //sets the variable for word "num"
+            var num2 = 135;
+           
+            
+            box3.addEventListener("click", function(){
+                
+               num2 = num2 - 10; //lets me add a additional value for "num" on each click
+                
+            box.style.height = num2+"px";
+            });
+            
+            box2.addEventListener("click", function(){
+                
+               num2 = num2 + 10; //lets me add a additional value for "num1" on each click
+                
+            box.style.height = num2+"px";
+            });
+            
+        </script>
+</body>
+
+</html>
